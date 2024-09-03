@@ -9,7 +9,7 @@ public class Login_Test {
   }
 
   @Test(priority=1)
-  void closeapp() {
+  void cl() {
 	  System.out.println("closed");
 
   }  
