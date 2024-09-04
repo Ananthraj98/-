@@ -10,7 +10,7 @@ public class Login_Test {
 
   @Test(priority=1)
   void closeapp() {
-	  System.out.println("up");  
+	  System.out.println("upp");  
   }
 }
 
