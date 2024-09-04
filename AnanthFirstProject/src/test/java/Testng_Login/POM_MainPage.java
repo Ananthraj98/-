@@ -17,7 +17,7 @@ public class POM_MainPage {
 	Event_POM objEvent_POM;
 	WebDriverWait wait;
 	
-	POM_MainPage(int d) {
+	public POM_MainPage() {
 		this.d = new ChromeDriver();
 		this.wait = new WebDriverWait(this.d, Duration.ofSeconds(10));
 		this.objEvent_POM = new Event_POM(this.d);
@@ -33,11 +33,13 @@ public void login() {
 	        d.findElement(By.xpath("//*[@id=\"login-form\"]/div[1]/input")).sendKeys("ananthraj@chkdin.com");
 	        d.findElement(By.id("user-password")).sendKeys("123456789");
 	        d.findElement(By.xpath("//*[@id=\"login-form\"]/button")).click();
+	        d.manage().window().fullscreen();
+
 	    }
 
 @Test
-public void Event()  {
-	System.out.println("Working...");
+public void Event() throws InterruptedException  {
+	//System.out.println("Working...");
 	objEvent_POM.Event(this.wait);
 	
 }
