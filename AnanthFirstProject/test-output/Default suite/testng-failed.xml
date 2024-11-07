@@ -6,7 +6,7 @@
       <class name="Testng_Login.POM_MainPage">
         <methods>
           <include name="logout"/>
-          <include name="setUp"/>
+          <include name="login"/>
           <include name="Event"/>
         </methods>
       </class> <!-- Testng_Login.POM_MainPage -->
