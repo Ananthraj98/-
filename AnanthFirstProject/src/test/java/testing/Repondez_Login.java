@@ -56,7 +56,7 @@ public class Repondez_Login {
 		WebElement element = wait.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//a[@href='https://repondez.staging.chkdin.com/console/332']")));
 
-		// Scroll into view using JavaScript (to avoid click interception)
+		//roll into view using JavaScript (to avoid click interception)
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
 
 		// Click the element using JavaScript (if regular click fails)
