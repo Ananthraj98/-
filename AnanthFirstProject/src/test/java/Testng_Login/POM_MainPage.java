@@ -40,7 +40,7 @@ public class POM_MainPage {
 		objEvent_POM.Event(this.wait);
 
 	}
-
+	
 	@AfterMethod
 	public void logout() throws InterruptedException {
 		WebElement accountClick = wait

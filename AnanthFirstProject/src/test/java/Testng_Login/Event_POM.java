@@ -30,5 +30,4 @@ public class Event_POM {
 		selcat.click();
 		
 	}
-
 }
