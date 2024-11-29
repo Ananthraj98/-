@@ -56,11 +56,29 @@ public class Repondez_Login {
 		WebElement element = wait.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//a[@href='https://repondez.staging.chkdin.com/console/332']")));
 
-		//roll into view using JavaScript (to avoid click interception)
+		// roll into view using JavaScript (to avoid click interception)
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
-
+		
 		// Click the element using JavaScript (if regular click fails)
 		js.executeScript("arguments[0].click();", element);
+
+		WebElement info = driver.findElement(
+				By.xpath("/html/body/div[2]/div[1]/div[2]/div[1]/div[2]/div/div/div/div/div/ul/li[1]/a/span[2]"));
+		Actions a = new Actions(driver);
+		a.moveToElement(info).perform();
+		WebElement details = driver.findElement(By.xpath("//*[@id=\"dash_guest\"]/li/ul/li[1]/a/span"));
+		details.click();
+
+		driver.findElement(By.id("reportrange")).click();
+
+		String startDate = "1"; // Example: 15th of the month
+		WebElement startDay = driver.findElement(By.xpath("//td[@class='available' and text()='" + startDate + "']"));
+		startDay.click();
+
+		// Select End Date
+		String endDate = "6"; // Example: 20th of the month
+		WebElement endDay = driver.findElement(By.xpath("//td[@class='available' and text()='" + endDate + "']"));
+		endDay.click();
+
 	}
 }
-		
