@@ -16,8 +16,13 @@ public class POM_MainPage {
 	WebDriver d;
 	Event_POM objEvent_POM;
 	WebDriverWait wait;
+<<<<<<< HEAD
 
 	POM_MainPage() {
+=======
+	
+	public POM_MainPage() {
+>>>>>>> refs/remotes/Ananth/main
 		this.d = new ChromeDriver();
 		this.wait = new WebDriverWait(this.d, Duration.ofSeconds(10));
 		this.objEvent_POM = new Event_POM(this.d);
@@ -27,6 +32,7 @@ public class POM_MainPage {
 	public void login() {
 		// TODO Auto-generated method stub
 
+<<<<<<< HEAD
 		// Initialize WebDriver
 		d.get("https://ticketdev.chkdin.com/sales-report");
 		// Perform login
@@ -34,12 +40,30 @@ public class POM_MainPage {
 		d.findElement(By.id("user-password")).sendKeys("123456789");
 		d.findElement(By.xpath("//*[@id=\"login-form\"]/button")).click();
 	}
+=======
+	        // Initialize WebDriver
+	        d.get("https://ticketdev.chkdin.com/sales-report");
+	        // Perform login
+	        d.findElement(By.xpath("//*[@id=\"login-form\"]/div[1]/input")).sendKeys("ananthraj@chkdin.com");
+	        d.findElement(By.id("user-password")).sendKeys("123456789");
+	        d.findElement(By.xpath("//*[@id=\"login-form\"]/button")).click();
+	        d.manage().window().fullscreen();
 
+	    }
+>>>>>>> refs/remotes/Ananth/main
+
+<<<<<<< HEAD
 	@Test
 	public void Event() throws InterruptedException {
 		objEvent_POM.Event(this.wait);
 
 	}
+=======
+@Test
+public void Event() throws InterruptedException  {
+	//System.out.println("Working...");
+	objEvent_POM.Event(this.wait);
+>>>>>>> refs/remotes/Ananth/main
 	
 	@AfterMethod
 	public void logout() throws InterruptedException {

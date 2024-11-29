@@ -14,7 +14,7 @@ System.out.println("eligible");
 
 else {
 
-	System.out.println("not eligible");
+	System.out.println("not eligibe");
 	
 }
 
