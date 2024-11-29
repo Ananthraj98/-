@@ -48,7 +48,7 @@ public class Repondez_Login {
 		WebElement passwordNextButton = driver.findElement(By.xpath("//*[@id='passwordNext']/div/button/div[3]"));
 		wait.until(ExpectedConditions.elementToBeClickable(passwordNextButton));
 
-		// Scroll into view and click using JavaScript if regular click fails
+		// Scrol into view and click using JavaScript if regular click fails
 		js.executeScript("arguments[0].scrollIntoView(true);", passwordNextButton);
 		js.executeScript("arguments[0].click();", passwordNextButton);
 
@@ -56,7 +56,7 @@ public class Repondez_Login {
 		WebElement element = wait.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//a[@href='https://repondez.staging.chkdin.com/console/332']")));
 
-		// roll into view using JavaScript (to avoid click interception)
+		// oll into view using JavaScript (to avoid click interception)
 		js.executeScript("arguments[0].scrollIntoView(true);", element);
 		
 		// Click the element using JavaScript (if regular click fails)
