@@ -18,7 +18,7 @@ public class Repondez_Login {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 
-		// Navigate to login page
+		// Naigate to login page
 		driver.get("https://repondez.staging.chkdin.com/login");
 
 		// Click on the login option
