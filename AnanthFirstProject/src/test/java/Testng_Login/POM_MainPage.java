@@ -13,68 +13,48 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class POM_MainPage {
-	WebDriver d;
-	Event_POM objEvent_POM;
-	WebDriverWait wait;
-<<<<<<< HEAD
+	 WebDriver d;
+	    Event_POM objEvent_POM;
+	    WebDriverWait wait;
 
-	POM_MainPage() {
-=======
-	
-	public POM_MainPage() {
->>>>>>> refs/remotes/Ananth/main
-		this.d = new ChromeDriver();
-		this.wait = new WebDriverWait(this.d, Duration.ofSeconds(10));
-		this.objEvent_POM = new Event_POM(this.d);
-	}
+	    // Constructor
+	    public POM_MainPage() {
+	        this.d = new ChromeDriver();
+	        this.wait = new WebDriverWait(this.d, Duration.ofSeconds(10));
+	        this.objEvent_POM = new Event_POM(this.d);
+	    }
 
-	@BeforeMethod
-	public void login() {
-		// TODO Auto-generated method stub
-
-<<<<<<< HEAD
-		// Initialize WebDriver
-		d.get("https://ticketdev.chkdin.com/sales-report");
-		// Perform login
-		d.findElement(By.xpath("//*[@id=\"login-form\"]/div[1]/input")).sendKeys("ananthraj@chkdin.com");
-		d.findElement(By.id("user-password")).sendKeys("123456789");
-		d.findElement(By.xpath("//*[@id=\"login-form\"]/button")).click();
-	}
-=======
+	    @BeforeMethod
+	    public void login() {
 	        // Initialize WebDriver
 	        d.get("https://ticketdev.chkdin.com/sales-report");
+	        d.manage().window().fullscreen();
+
 	        // Perform login
 	        d.findElement(By.xpath("//*[@id=\"login-form\"]/div[1]/input")).sendKeys("ananthraj@chkdin.com");
 	        d.findElement(By.id("user-password")).sendKeys("123456789");
 	        d.findElement(By.xpath("//*[@id=\"login-form\"]/button")).click();
-	        d.manage().window().fullscreen();
-
 	    }
->>>>>>> refs/remotes/Ananth/main
 
-<<<<<<< HEAD
-	@Test
-	public void Event() throws InterruptedException {
-		objEvent_POM.Event(this.wait);
+	    @Test
+	    public void Event_POM() throws InterruptedException {
+	        objEvent_POM.Event(this.wait);
+	    }
 
+	    @AfterMethod
+	    public void logout() throws InterruptedException {
+	        // Click on account menu
+	        WebElement accountClick = wait
+	                .until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"accountClick\"]/span")));
+	        Thread.sleep(5000); // Consider avoiding `Thread.sleep` in real tests.
+	        accountClick.click();
+
+	        // Click on logout link
+	        WebElement logoutLink = wait.until(ExpectedConditions
+	                .elementToBeClickable(By.xpath("/html/body/header/div/nav/div/div[2]/ul/li[2]/ul/li[2]/a[2]")));
+	        logoutLink.click();
+
+	        // Quit the browser
+	        d.quit();
+	    }
 	}
-=======
-@Test
-public void Event() throws InterruptedException  {
-	//System.out.println("Working...");
-	objEvent_POM.Event(this.wait);
->>>>>>> refs/remotes/Ananth/main
-	
-	@AfterMethod
-	public void logout() throws InterruptedException {
-		WebElement accountClick = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"accountClick\"]/span")));
-		Thread.sleep(5000);
-		accountClick.click();
-
-		WebElement logoutLink = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("/html/body/header/div/nav/div/div[2]/ul/li[2]/ul/li[2]/a[2]")));
-		logoutLink.click();
-		d.quit();
-	}
-}

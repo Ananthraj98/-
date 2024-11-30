@@ -74,11 +74,11 @@ public class Repondez_Login {
 		String startDate = "1"; // Example: 15th of the month
 		WebElement startDay = driver.findElement(By.xpath("//td[@class='available' and text()='" + startDate + "']"));
 		startDay.click();
-
+		//td[@class='available' and text()='" + startDate + "']"))
 		// Select End Date
 		String endDate = "6"; // Example: 20th of the month
 		WebElement endDay = driver.findElement(By.xpath("//td[@class='available' and text()='" + endDate + "']"));
 		endDay.click();
 
 	}
-}
+}             //td[@class='active start-date available']
