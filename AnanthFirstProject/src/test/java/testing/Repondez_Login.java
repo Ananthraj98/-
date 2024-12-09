@@ -13,8 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Repondez_Login {
 
-	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
+	public void login() {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 
@@ -61,24 +60,13 @@ public class Repondez_Login {
 		
 		// Click the element using JavaScript (if regular click fails)
 		js.executeScript("arguments[0].click();", element);
-
-		WebElement info = driver.findElement(
-				By.xpath("/html/body/div[2]/div[1]/div[2]/div[1]/div[2]/div/div/div/div/div/ul/li[1]/a/span[2]"));
-		Actions a = new Actions(driver);
-		a.moveToElement(info).perform();
-		WebElement details = driver.findElement(By.xpath("//*[@id=\"dash_guest\"]/li/ul/li[1]/a/span"));
-		details.click();
-
-		driver.findElement(By.id("reportrange")).click();
-
-		String startDate = "1"; // Example: 15th of the month
-		WebElement startDay = driver.findElement(By.xpath("//td[@class='available' and text()='" + startDate + "']"));
-		startDay.click();
-		//td[@class='available' and text()='" + startDate + "']"))
-		// Select End Date
-		String endDate = "6"; // Example: 20th of the month
-		WebElement endDay = driver.findElement(By.xpath("//td[@class='available' and text()='" + endDate + "']"));
-		endDay.click();
-
-	}
-}             //td[@class='active start-date available']
+}
+		
+public static void main(String[] args) throws InterruptedException {
+			// TODO Auto-generated method stub
+	Repondez_Login a= new Repondez_Login();
+    a.login();
+    
+}
+}
+	
