@@ -13,17 +13,21 @@ public class Makemytrip {
 	WebDriver d;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+try {		
 WebDriver d= new ChromeDriver();
 d.get("https://www.makemytrip.com/");
-WebDriverWait wait = new WebDriverWait(d, Duration.ofSeconds(10));
-WebElement close = wait
-		.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/div/div[1]/div[1]/div[2]/div[2]/div/section/span")));
-			close.click();
+//WebDriverWait wait = new WebDriverWait(d, Duration.ofSeconds(10));
+//WebElement close = wait
+		//.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/div/div[1]/div[1]/div[2]/div[2]/div/section/span")));
+		//	close.click();
+d.findElement(By.xpath("/html/body/div[1]/div/div[1]/div[1]/div[2]/div[2]/div/section/span")).click();
 
+}
+catch(Exception e) {
+	
+System.out.println("exception occurs");
 
-
-
-	}
+}
+}
 
 }

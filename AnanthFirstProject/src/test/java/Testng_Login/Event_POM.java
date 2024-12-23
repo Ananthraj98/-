@@ -15,9 +15,7 @@ public class Event_POM {
 	By SelectCategory = By.xpath(
 			"/html/body/div[10]/div[2]/div/div/div[2]/div/div/div[1]/div[1]/div/form/div[1]/div[2]/div/div/div[2]/div/button/div/div/div");
 
-	public Event_POM(WebDriver d) {
-		this.d = d;
-	}
+	
 
 	public void Event(WebDriverWait wait) throws InterruptedException {
 		WebElement Create = wait.until(ExpectedConditions.elementToBeClickable(CreateEvent));
@@ -30,4 +28,9 @@ public class Event_POM {
 		selcat.click();
 		
 	}
-}
+		public Event_POM(WebDriver d) { //constructor event_pom should be class name without return type
+			this.d = d;
+			//super.d=d; super is a keyword parent class
+		}
+	}
+

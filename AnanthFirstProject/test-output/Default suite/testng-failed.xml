@@ -5,9 +5,9 @@
     <classes>
       <class name="Testng_Login.POM_MainPage">
         <methods>
-          <include name="logout"/>
           <include name="login"/>
-          <include name="Event"/>
+          <include name="logout"/>
+          <include name="Event_POM"/>
         </methods>
       </class> <!-- Testng_Login.POM_MainPage -->
     </classes>
