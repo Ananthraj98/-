@@ -1,6 +1,7 @@
 package Testng_Login;
 
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 public class Login_Test {
   @Test(priority=2)

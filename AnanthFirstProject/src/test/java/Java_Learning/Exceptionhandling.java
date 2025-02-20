@@ -9,7 +9,7 @@ public class Exceptionhandling {
 	        } catch (ArithmeticException e) {
 	            System.out.println("Arithmetic Exception caught: " + e.getMessage());
 	        } finally {
-	            System.out.println("Always execute the finally block.");
+	            System.out.println("Always execute the finally block");
 	        }
 	    }
 	}

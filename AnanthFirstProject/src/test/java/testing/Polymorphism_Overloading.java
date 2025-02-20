@@ -18,8 +18,6 @@ public static void main(String[] args) {
 	Polymorphism_Overloading obj=new Polymorphism_Overloading();
 	//obj.sum(obj.a,obj.b);
 	obj.sum(1,2);
-	
-	
+		
 }
-
 }
